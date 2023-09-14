@@ -20,6 +20,32 @@ public class Medico {
     private String nome;
     private String email;
     private String crm;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCrm() {
+        return crm;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Especialidade getEspecialidade() {
+        return especialidade;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    private String telefone;
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
     @Embedded
@@ -31,5 +57,6 @@ public class Medico {
         this.crm = dados.crm();
         this.endereco = new Endereco(dados.endereco());
         this.especialidade = dados.especialidade();
+        this.telefone = dados.telefone();
     }
 }
