@@ -22,8 +22,21 @@ public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
     private String login;
     private String senha;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
