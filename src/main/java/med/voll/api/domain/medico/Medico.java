@@ -58,7 +58,7 @@ public class Medico {
 
     private boolean ativo;
 
-    public Medico(DadoscadastroMedico dados) {
+    public Medico(DadosCadastroMedico dados) {
         this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();;
@@ -76,7 +76,7 @@ public class Medico {
             this.telefone = dados.telefone();
         }
         if(dados.endereco() != null){
-            this.endereco.atualizarInformcacoes(dados.endereco());
+            this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
 
